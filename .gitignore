@@ -1,2 +1,5 @@
 .next
 node_modules
+aws-config.json
+accessKeys.csv
+credentials.csv

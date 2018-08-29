@@ -3,7 +3,8 @@ import { fetchImages } from "../helpers/s3";
 
 export default class Index extends Component {
   state = {
-    galleries: []
+    galleries: [],
+    loading: true
   };
 
   async componentDidMount() {
@@ -23,10 +24,14 @@ export default class Index extends Component {
         let thumbnail = "";
         let addedThumbnail = false;
 
-        data.filter(function({ Key }, i) {
+        data.map(function({ Key }, i) {
           // get all images related to that category
-          if (Key.includes(title) && Key.includes(".jpg")) {
+          if (
+            Key.includes(title) &&
+            (Key.includes(".jpg") || Key.includes(".png"))
+          ) {
             images.push(Key);
+
             if (!addedThumbnail) {
               thumbnail = Key;
               addedThumbnail = true;
@@ -44,15 +49,17 @@ export default class Index extends Component {
       }
     });
 
-    this.setState({ galleries });
+    this.setState({ galleries, loading: false });
   }
 
   render() {
-    console.log(this.state.galleries);
-    return (
+    const { loading, galleries } = this.state;
+
+    return loading ? (
+      <img src="https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif" />
+    ) : (
       <div>
-        <p>Hello Next.js</p>
-        {this.state.galleries.map((gallery, i) => (
+        {galleries.map((gallery, i) => (
           <div className="gallery" key={i}>
             <h2>{gallery.title}</h2>
             <img

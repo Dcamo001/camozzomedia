@@ -13,9 +13,9 @@ export async function fetchImages(cb) {
         "Content-Type": "application/json"
       }
     });
-
-    console.log(response);
+    return response.data.gallery;
   } catch (error) {
     console.error("WHOOPS", error);
+    return [];
   }
 }

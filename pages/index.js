@@ -6,9 +6,9 @@ export default class Index extends Component {
     image: ""
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     console.log("Hello");
-    fetchImages();
+    const images = await fetchImages();
   }
 
   getImage = async () => {};

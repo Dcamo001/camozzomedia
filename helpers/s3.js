@@ -4,11 +4,18 @@ export async function fetchImages(cb) {
   console.log("Hello from fetchImages");
 
   try {
-    const response = await axios.get(
-      "https://r3cfyldhn8.execute-api.us-west-1.amazonaws.com/dev/fetchImages"
-    );
+    const response = await axios({
+      method: "get",
+      url:
+        "https://r3cfyldhn8.execute-api.us-west-1.amazonaws.com/dev/fetchImages",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    });
+
     console.log(response);
   } catch (error) {
-    console.error(error);
+    console.error("WHOOPS", error);
   }
 }

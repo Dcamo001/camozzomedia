@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import Link from "next/link";
 
 const navItems = [
   {
@@ -10,7 +11,7 @@ const navItems = [
 
   {
     text: "contact/about",
-    link: "/about",
+    link: "/about/index",
     newTab: false
   },
 
@@ -39,9 +40,9 @@ export default function Header() {
       <ul>
         {navItems.map(({ link, newTab, text }, i) => (
           <li key={i}>
-            <a href={link} target={newTab ? "_blank" : ""}>
-              {text}
-            </a>
+            <Link href={link}>
+              <a target={newTab ? "_blank" : ""}>{text}</a>
+            </Link>
           </li>
         ))}
       </ul>

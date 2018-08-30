@@ -11,7 +11,7 @@ const navItems = [
 
   {
     text: "contact/about",
-    link: "/about/index",
+    link: "/about",
     newTab: false
   },
 

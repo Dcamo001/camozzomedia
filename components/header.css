@@ -9,16 +9,11 @@ a {
 
 h1 {
   color: black;
-  font-size: 35px;
-  font-weight: 300;
-  letter-spacing: 0.0555556em;
 }
 
 h5 {
   margin: 4px;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
+  padding: 0 0 8px 0;
 }
 
 ul {

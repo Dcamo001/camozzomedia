@@ -6,8 +6,35 @@
 html {
   font-family: "Lato", "Proxima Nova", "Open Sans", "Helvetica Neue", Helvetica,
     Arial, sans-serif;
+  padding: 16px;
 }
 
-.container {
-  padding: 16px;
+h1 {
+  font-size: 35px;
+  font-weight: 300;
+  letter-spacing: 0.0555556em;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  padding: 8px 0;
+}
+
+h4 {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.15px;
+  padding: 8px 0;
+}
+
+h5 {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+p {
+  padding: 8px 0;
 }

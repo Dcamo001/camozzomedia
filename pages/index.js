@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { fetchImages } from "../helpers/s3";
 import Header from "../components/Header";
+import "./index.css";
 
 export default class Index extends Component {
   state = {

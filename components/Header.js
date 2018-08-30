@@ -1,4 +1,5 @@
 import React from "react";
+import "./header.css";
 
 const navItems = [
   {
@@ -33,7 +34,7 @@ export default function Header() {
         <a href="/">
           <h1>DANNY CAMOZZO</h1>
         </a>
-        <h2>- PHOTO / VIDEO -</h2>
+        <h5>- PHOTO / VIDEO -</h5>
       </div>
       <ul>
         {navItems.map(({ link, newTab, text }, i) => (

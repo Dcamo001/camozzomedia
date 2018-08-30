@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { fetchImages } from "../helpers/s3";
+import Header from "../components/Header";
 
 export default class Index extends Component {
   state = {
@@ -58,7 +59,8 @@ export default class Index extends Component {
     return loading ? (
       <img src="https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif" />
     ) : (
-      <div>
+      <div className="container">
+        <Header />
         {galleries.map((gallery, i) => (
           <div className="gallery" key={i}>
             <h2>{gallery.title}</h2>

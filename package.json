@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-css": "^0.2.0",
-    "aws-sdk": "^2.302.0",
+    "aws-sdk": "^2.814.0",
     "axios": "^0.21.1",
     "next": "^11.1.1",
     "react": "^16.4.2",
